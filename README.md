@@ -77,3 +77,15 @@ Application state for the multi-step form is stored in `src/stores/loanStore.js`
 ```sh
 npm install chart.js vue-chartjs
 ```
+
+## 🛍️ Services & Items
+
+- `ServicesView.vue` features a dual-mode interface for managing Items and Categories.
+- Includes searching, filtering, and toggle navigation.
+
+## 🐛 Troubleshooting
+
+**Common Error: "Failed to resolve import"**
+
+- Ensure `LoansView.vue` is created in `src/views/`.
+- Ensure `App.vue` imports `DashboardLayout` from the correct path: `@/components/layouts/DashboardLayout.vue`.
