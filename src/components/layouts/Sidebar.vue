@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-// Note: Icon components would be imported here after installing lucide-vue-next
 </script>
 
 <template>
@@ -30,9 +29,25 @@ import { RouterLink } from 'vue-router'
 
     <nav class="flex-1 overflow-y-auto px-4 space-y-6 pb-6">
       <div class="space-y-1">
-        <RouterLink to="/" class="nav-item active">Dashboard</RouterLink>
-        <RouterLink to="/business" class="nav-item">My Business</RouterLink>
-        <RouterLink to="/services" class="nav-item flex justify-between items-center">
+        <RouterLink
+          to="/"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          Dashboard
+        </RouterLink>
+        <RouterLink
+          to="/business"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          My Business
+        </RouterLink>
+        <RouterLink
+          to="/services"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
           <span>Services and Items</span>
           <span class="text-xs">›</span>
         </RouterLink>
@@ -40,43 +55,100 @@ import { RouterLink } from 'vue-router'
 
       <div class="space-y-1">
         <p class="px-3 text-[10px] font-bold text-gray-400 uppercase tracking-wider">Payments</p>
-        <RouterLink to="/transactions" class="nav-item flex justify-between items-center">
+        <RouterLink
+          to="/transactions"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
           <span>Transactions</span>
           <span class="text-xs">›</span>
         </RouterLink>
-        <RouterLink to="/invoices" class="nav-item">Invoices</RouterLink>
-        <RouterLink to="/disputes" class="nav-item">Disputes</RouterLink>
-        <RouterLink to="/payment-link" class="nav-item">Payment Link</RouterLink>
-        <RouterLink to="/pos" class="nav-item">POS Terminals</RouterLink>
+        <RouterLink
+          to="/invoices"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          Invoices
+        </RouterLink>
+        <RouterLink
+          to="/disputes"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          Disputes
+        </RouterLink>
+        <RouterLink
+          to="/payment-link"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          Payment Link
+        </RouterLink>
+        <RouterLink
+          to="/pos"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          POS Terminals
+        </RouterLink>
       </div>
 
       <div class="space-y-1">
         <p class="px-3 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
           Banking Services
         </p>
-        <RouterLink to="/transfers" class="nav-item">Transfers</RouterLink>
-        <RouterLink to="/bills" class="nav-item">Bills Payment</RouterLink>
-        <RouterLink to="/savings" class="nav-item">Savings</RouterLink>
-        <RouterLink to="/loans" class="nav-item">Loans</RouterLink>
+        <RouterLink
+          to="/transfers"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          Transfers
+        </RouterLink>
+        <RouterLink
+          to="/bills"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          Bills Payment
+        </RouterLink>
+        <RouterLink
+          to="/savings"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          Savings
+        </RouterLink>
+        <RouterLink
+          to="/loans"
+          active-class="bg-white text-brand-purple shadow-sm"
+          class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+        >
+          Loans
+        </RouterLink>
       </div>
     </nav>
 
     <div class="p-4 border-t border-gray-200 space-y-1">
-      <RouterLink to="/staffs" class="nav-item flex justify-between items-center">
+      <RouterLink
+        to="/staffs"
+        active-class="bg-white text-brand-purple shadow-sm"
+        class="flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+      >
         <span>Staffs</span>
         <span class="text-xs">›</span>
       </RouterLink>
-      <RouterLink to="/settings" class="nav-item">Settings</RouterLink>
-      <button class="nav-item w-full text-left text-red-500 hover:bg-red-50">Log out</button>
+      <RouterLink
+        to="/settings"
+        active-class="bg-white text-brand-purple shadow-sm"
+        class="flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple"
+      >
+        Settings
+      </RouterLink>
+      <button
+        class="w-full text-left text-red-500 hover:bg-red-50 flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors"
+      >
+        Log out
+      </button>
     </div>
   </aside>
 </template>
-
-<style scoped>
-.nav-item {
-  @apply flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-colors hover:bg-white hover:text-brand-purple;
-}
-.nav-item.active {
-  @apply bg-white text-brand-purple shadow-sm;
-}
-</style>

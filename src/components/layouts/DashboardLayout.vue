@@ -1,5 +1,6 @@
 <script setup>
-import Sidebar from '@/components/layout/Sidebar.vue'
+// FIXED: Added 's' to layout matching your folder structure
+import Sidebar from '@/components/layouts/Sidebar.vue'
 </script>
 
 <template>

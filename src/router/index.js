@@ -12,18 +12,26 @@ const router = createRouter({
     {
       path: '/loans',
       name: 'loans',
-      component: () => import('../views/LoansView.vue'), // To be created
+      // Ensure this file actually exists in src/views/LoansView.vue
+      component: () => import('../views/LoansView.vue'),
     },
-    // Additional routes from sidebar would be added here...
     {
       path: '/services',
       name: 'services',
+      // Ensure this file actually exists in src/views/ServicesView.vue
       component: () => import('../views/ServicesView.vue'),
     },
-    // Placeholder for other routes to prevent errors if clicked
+    // Placeholder routes to prevent errors when clicking sidebar links
     { path: '/transactions', component: HomeView },
     { path: '/invoices', component: HomeView },
-    // ... add others as needed
+    { path: '/disputes', component: HomeView },
+    { path: '/payment-link', component: HomeView },
+    { path: '/pos', component: HomeView },
+    { path: '/transfers', component: HomeView },
+    { path: '/bills', component: HomeView },
+    { path: '/savings', component: HomeView },
+    { path: '/staffs', component: HomeView },
+    { path: '/settings', component: HomeView },
   ],
 })
 

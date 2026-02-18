@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import DashboardLayout from './layouts/DashboardLayout.vue'
+// FIXED: Point to the correct location in components/layouts
+import DashboardLayout from '@/components/layouts/DashboardLayout.vue'
 </script>
 
 <template>
