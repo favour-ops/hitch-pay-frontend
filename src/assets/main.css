@@ -1,1 +1,23 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  /* Primary brand purple used for buttons and active states */
+  --color-brand-purple: #4c1d95;
+  /* Darker purple for hover states or headers */
+  --color-brand-purple-dark: #2e1065;
+  /* Light lavender background used in the sidebar */
+  --color-brand-lavender: #f9f5ff;
+  /* Success green for "Go" buttons and "Active" status badges */
+  --color-brand-green: #10b981;
+  /* Layout backgrounds */
+  --color-layout-bg: #f3f5f4;
+  --color-brand-purple-light: #6d28d9;
+  --color-step-active: #4c1d95;
+  --color-step-inactive: #e5e7eb;
+}
+
+@layer base {
+  body {
+    @apply bg-layout-bg text-gray-900;
+  }
+}
