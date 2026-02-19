@@ -1,23 +1,46 @@
 @import 'tailwindcss';
 
+/* FIXED: This forces Tailwind v4 to strictly use the class toggle for dark mode */
+@variant dark (&:is(.dark *));
+
 @theme {
-  /* Primary brand purple used for buttons and active states */
+  /* Brand Colors */
   --color-brand-purple: #4c1d95;
-  /* Darker purple for hover states or headers */
   --color-brand-purple-dark: #2e1065;
-  /* Light lavender background used in the sidebar */
-  --color-brand-lavender: #f9f5ff;
-  /* Success green for "Go" buttons and "Active" status badges */
-  --color-brand-green: #10b981;
-  /* Layout backgrounds */
-  --color-layout-bg: #f3f5f4;
   --color-brand-purple-light: #6d28d9;
-  --color-step-active: #4c1d95;
-  --color-step-inactive: #e5e7eb;
+  --color-brand-lavender: #f9f5ff;
+  --color-brand-green: #10b981;
+  /* --color-step-active: #4c1d95;
+  --color-step-inactive: #e5e7eb; */
+
+  /* Semantic Layout Colors */
+  /* --color-layout-bg: var(--color-bg-layout);
+  --color-surface: var(--color-bg-surface);
+  --color-sidebar: var(--color-bg-sidebar);
+  --color-border-color: var(--color-border); */
 }
 
 @layer base {
+  /* :root {
+    --color-bg-layout: #f3f5f4;
+    --color-bg-surface: #ffffff;
+    --color-bg-sidebar: #f9f5ff;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #6b7280;
+    --color-border: #e5e7eb;
+  }
+
+  .dark {
+    --color-bg-layout: #111827;
+    --color-bg-surface: #1f2937;
+    --color-bg-sidebar: #171e2e;
+    --color-text-primary: #f3f4f6;
+    --color-text-secondary: #9ca3af;
+    --color-border: #374151;
+  } */
+
   body {
-    @apply bg-layout-bg text-gray-900;
+    /* Base text colors */
+    @apply bg-[#f3f5f4] dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300;
   }
 }

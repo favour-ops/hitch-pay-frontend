@@ -4,25 +4,17 @@ import HomeView from '../views/HomeView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    { path: '/', name: 'home', component: HomeView },
+    { path: '/loans', name: 'loans', component: () => import('../views/LoansView.vue') },
+    { path: '/services', name: 'services', component: () => import('../views/ServicesView.vue') },
     {
-      path: '/',
-      name: 'home',
-      component: HomeView,
+      path: '/transactions',
+      name: 'transactions',
+      component: () => import('../views/TransactionsView.vue'),
     },
-    {
-      path: '/loans',
-      name: 'loans',
-      // Ensure this file actually exists in src/views/LoansView.vue
-      component: () => import('../views/LoansView.vue'),
-    },
-    {
-      path: '/services',
-      name: 'services',
-      // Ensure this file actually exists in src/views/ServicesView.vue
-      component: () => import('../views/ServicesView.vue'),
-    },
+    { path: '/staffs', name: 'staffs', component: () => import('../views/StaffsView.vue') },
+    { path: '/settings', name: 'settings', component: () => import('../views/SettingsView.vue') },
     // Placeholder routes to prevent errors when clicking sidebar links
-    { path: '/transactions', component: HomeView },
     { path: '/invoices', component: HomeView },
     { path: '/disputes', component: HomeView },
     { path: '/payment-link', component: HomeView },
@@ -30,8 +22,6 @@ const router = createRouter({
     { path: '/transfers', component: HomeView },
     { path: '/bills', component: HomeView },
     { path: '/savings', component: HomeView },
-    { path: '/staffs', component: HomeView },
-    { path: '/settings', component: HomeView },
   ],
 })
 
